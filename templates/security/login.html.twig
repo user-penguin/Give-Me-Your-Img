@@ -10,7 +10,9 @@
 </style>
 
 <div class="example-wrapper">
-    <a href="{{ path('logout') }}">Logout</a>
+    <a href="{{ path('main') }}">Главная</a>
+    <a href="{{ path('app_register') }}">Зарегистрироваться</a>
+
     <h1>Login page ✅</h1>
     {% if error %}
         <span class="error">{{ error.messageKey }}</span>

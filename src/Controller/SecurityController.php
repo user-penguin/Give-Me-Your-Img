@@ -20,6 +20,7 @@ class SecurityController extends AbstractController
     {
         $errors = $utils->getLastAuthenticationError();
         $lastUsername = $utils->getLastUsername();
+        if ($request->us)
 
         return $this->render('security/login.html.twig', [
             'error'         => $errors,
@@ -33,4 +34,13 @@ class SecurityController extends AbstractController
     public function logout() {
 
     }
+
+    /**
+     * @Route("/", name="main")
+     */
+    public function main() {
+        return $this->render('index.html.twig');
+    }
+
+
 }
